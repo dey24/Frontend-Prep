@@ -1,6 +1,6 @@
 const fetchWithTimeout = (url, duration) => {
   return new Promise((resolve, reject) => {
-    const controller = new AbortController();
+    const controller = new AbortController(); // we create an instance of the AbortController class, which allows us to abort the fetch request when the timer expires
     const signal = controller.signal; // signal is used to abort the fetch request when the timer expires
     let timerId = null;
     fetch(url, {signal})
